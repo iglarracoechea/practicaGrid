@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+*,*::before , *::after{
+	box-sizing: border-box;
+}
+
+.body{
+	background: #eeeeee;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+.h1{
+	font-size: 50px;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.contenedor{
+	width: 50%;
+	max-width: 1000px; /*me aseguro que no sea demasiado grande*/
+	margin: 60px auto;
+	font-size: 50px;
+	line-height: 50px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr);
+	grid-gap: 15px;
+}
+
+.contenedor > div{  /*selector hijo directo*/
+	display: block;	/*para que abarque todo el espacio disponible*/
+	padding:20px;
+	color: #fff;
+	background: steelblue;
+	box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+	border:5px solid black;
+}
+
+.contenedor div:first-child{
+	box-shadow: 6px 0 red inset;
+}
+
+.contenedor div:first-child:hover{
+	box-shadow: 208px 0 red inset;
+	transition: all 1s;
+}
+
+.contenedor div:nth-child(2){
+	box-shadow: -6px 0 red inset;
+}
+
+.contenedor div:nth-child(2):hover{
+	box-shadow: -208px 0 red inset;
+	transition: all 1s;
+}
+
+.contenedor div:nth-child(3){
+	box-shadow: 0 6px red inset;
+}
+
+.contenedor div:nth-child(3):hover{
+	box-shadow: 0 90px red inset;
+	transition: all 1s;
+}
+
+.contenedor div:nth-child(4){
+	box-shadow: 0 -6px red inset;
+}
+
+.contenedor div:nth-child(4):hover{
+	box-shadow: 0 -90px red inset;
+	transition: all 1s;
+}
+
+.contenedor div:nth-child(5){
+	box-shadow: 6px 0 red inset,
+			   -6px 0 red inset;
+}
+
+.contenedor div:nth-child(5):hover{
+		box-shadow: 208px 0 red inset,
+			   	    -208px 0 red inset;
+		transition: all 1s;
+}
+
+.contenedor div:nth-child(6){
+	box-shadow: 0 6px red inset,
+			   -0 -6px red inset;
+}
+
+.contenedor div:nth-child(6):hover{
+		box-shadow:  0 90px red inset,
+			   	     0  -90px red inset;
+		transition: all 1s;
+}
